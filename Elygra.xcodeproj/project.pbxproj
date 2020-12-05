@@ -11,7 +11,7 @@
 		82619C7F257BD020002DAF2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C7E257BD020002DAF2A /* ContentView.swift */; };
 		82619C81257BD029002DAF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82619C80257BD029002DAF2A /* Assets.xcassets */; };
 		82619C84257BD029002DAF2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82619C83257BD029002DAF2A /* Preview Assets.xcassets */; };
-		82619C8F257BD02A002DAF2A /* ElygraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C8E257BD02A002DAF2A /* ElygraTests.swift */; };
+		82619C8F257BD02A002DAF2A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C8E257BD02A002DAF2A /* ModelTests.swift */; };
 		82619C9A257BD02A002DAF2A /* ElygraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C99257BD02A002DAF2A /* ElygraUITests.swift */; };
 		82619CAC257BD19B002DAF2A /* LinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CAB257BD19B002DAF2A /* LinkItem.swift */; };
 		82619CB1257BD2CD002DAF2A /* LinkItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CB0257BD2CD002DAF2A /* LinkItemsResponse.swift */; };
@@ -21,6 +21,10 @@
 		82619CBD257BD36C002DAF2A /* LinkItem.json in Resources */ = {isa = PBXBuildFile; fileRef = 82619CBB257BD36C002DAF2A /* LinkItem.json */; };
 		82619CC5257BD37A002DAF2A /* LinkItemsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 82619CC4257BD37A002DAF2A /* LinkItemsResponse.json */; };
 		82619CC6257BD37A002DAF2A /* LinkItemsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 82619CC4257BD37A002DAF2A /* LinkItemsResponse.json */; };
+		82619CD8257BDB2C002DAF2A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CD7257BDB2C002DAF2A /* Network.swift */; };
+		82619CD9257BDB2C002DAF2A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CD7257BDB2C002DAF2A /* Network.swift */; };
+		82619CDE257C04BE002DAF2A /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CDD257C04BE002DAF2A /* Resources.swift */; };
+		82619CDF257C04BE002DAF2A /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CDD257C04BE002DAF2A /* Resources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +52,7 @@
 		82619C83257BD029002DAF2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82619C85257BD029002DAF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82619C8A257BD02A002DAF2A /* ElygraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElygraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		82619C8E257BD02A002DAF2A /* ElygraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElygraTests.swift; sourceTree = "<group>"; };
+		82619C8E257BD02A002DAF2A /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		82619C90257BD02A002DAF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82619C95257BD02A002DAF2A /* ElygraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElygraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82619C99257BD02A002DAF2A /* ElygraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElygraUITests.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		82619CB0257BD2CD002DAF2A /* LinkItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkItemsResponse.swift; sourceTree = "<group>"; };
 		82619CBB257BD36C002DAF2A /* LinkItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LinkItem.json; sourceTree = "<group>"; };
 		82619CC4257BD37A002DAF2A /* LinkItemsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LinkItemsResponse.json; sourceTree = "<group>"; };
+		82619CD7257BDB2C002DAF2A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		82619CDD257C04BE002DAF2A /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		82619C7B257BD020002DAF2A /* Elygra */ = {
 			isa = PBXGroup;
 			children = (
+				82619CCD257BD97D002DAF2A /* Network */,
 				82619CAA257BD188002DAF2A /* Model */,
 				82619C7C257BD020002DAF2A /* ElygraApp.swift */,
 				82619C7E257BD020002DAF2A /* ContentView.swift */,
@@ -129,7 +136,7 @@
 		82619C8D257BD02A002DAF2A /* ElygraTests */ = {
 			isa = PBXGroup;
 			children = (
-				82619C8E257BD02A002DAF2A /* ElygraTests.swift */,
+				82619C8E257BD02A002DAF2A /* ModelTests.swift */,
 				82619C90257BD02A002DAF2A /* Info.plist */,
 			);
 			path = ElygraTests;
@@ -160,6 +167,15 @@
 				82619CC4257BD37A002DAF2A /* LinkItemsResponse.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		82619CCD257BD97D002DAF2A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				82619CD7257BDB2C002DAF2A /* Network.swift */,
+				82619CDD257C04BE002DAF2A /* Resources.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82619CAC257BD19B002DAF2A /* LinkItem.swift in Sources */,
+				82619CDE257C04BE002DAF2A /* Resources.swift in Sources */,
+				82619CD8257BDB2C002DAF2A /* Network.swift in Sources */,
 				82619CB1257BD2CD002DAF2A /* LinkItemsResponse.swift in Sources */,
 				82619C7F257BD020002DAF2A /* ContentView.swift in Sources */,
 				82619C7D257BD020002DAF2A /* ElygraApp.swift in Sources */,
@@ -306,8 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82619CD9257BDB2C002DAF2A /* Network.swift in Sources */,
 				82619CB6257BD2D2002DAF2A /* LinkItem.swift in Sources */,
-				82619C8F257BD02A002DAF2A /* ElygraTests.swift in Sources */,
+				82619C8F257BD02A002DAF2A /* ModelTests.swift in Sources */,
+				82619CDF257C04BE002DAF2A /* Resources.swift in Sources */,
 				82619CB2257BD2CD002DAF2A /* LinkItemsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,15 +8,7 @@
 import XCTest
 @testable import Elygra
 
-class ElygraTests: XCTestCase {
-    override func setUpWithError() throws {
-
-    }
-
-    override func tearDownWithError() throws {
-
-    }
-
+class ModelTests: XCTestCase {
     func testLinkItemParsing() throws {
         guard let urlPath = mockJsonPath(with: "LinkItem") else {
             XCTAssert(false, "Mock for \(#function) not found")
@@ -57,7 +49,7 @@ class ElygraTests: XCTestCase {
 
 }
 
-extension ElygraTests {
+extension ModelTests {
     func mockJsonPath(with name: String) -> URL? {
         Bundle.main.path(forResource: name, ofType: "json")
             .flatMap { URL(fileURLWithPath: $0) }
