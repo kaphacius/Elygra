@@ -1,0 +1,34 @@
+{
+  "id": "amazon_warehouse",
+  "name": "Amazon Warehouse",
+  "features": {
+    "pay_distribution_write": {
+      "supported": true,
+      "max_splits": 4,
+      "split_types": [
+        "amount"
+      ]
+    }
+  },
+  "long_name": "Amazon Warehouse",
+  "type": "services",
+  "category": "company",
+  "integration": "amazonwarehouse_remote",
+  "auth_requirements": {
+    "password": {
+      "type": "password",
+      "label": "Password",
+      "order": 1
+    },
+    "username": {
+      "type": "username",
+      "label": "Username",
+      "order": 0
+    }
+  },
+  "is_item_list": false,
+  "items": null,
+  "is_disabled": false,
+  "logo_url": null,
+  "login_url": "https://www.amazon.work"
+}

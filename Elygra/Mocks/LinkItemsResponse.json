@@ -1,0 +1,486 @@
+{
+  "count": 6038,
+  "next": "https://api.argyle.io/link/v1/link-items?limit=15&offset=30&search=a",
+  "previous": "https://api.argyle.io/link/v1/link-items?limit=15&search=a",
+  "results": [
+    {
+      "id": "postmates",
+      "name": "Postmates",
+      "features": {
+        "pay_distribution_write": {
+          "supported": true,
+          "max_splits": 1,
+          "split_types": [
+            "percent"
+          ]
+        }
+      },
+      "long_name": null,
+      "type": "delivery",
+      "category": "company",
+      "integration": "postmates_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "email",
+          "label": "Email",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "amazon_flex",
+      "name": "Amazon Flex",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "delivery",
+      "category": "company",
+      "integration": "amazonflex_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "email",
+          "label": "Email",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "instacart",
+      "name": "Instacart",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "delivery",
+      "category": "company",
+      "integration": "instacart_remote",
+      "auth_requirements": {
+        "username": {
+          "type": "tel",
+          "label": "Phone number",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "caviar",
+      "name": "Caviar",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "delivery",
+      "category": "company",
+      "integration": "doordash_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Email",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "amazon_warehouse",
+      "name": "Amazon Warehouse",
+      "features": {
+        "pay_distribution_write": {
+          "supported": true,
+          "max_splits": 4,
+          "split_types": [
+            "amount"
+          ]
+        }
+      },
+      "long_name": "Amazon Warehouse",
+      "type": "services",
+      "category": "company",
+      "integration": "amazonwarehouse_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": "https://www.amazon.work"
+    },
+    {
+      "id": "metromarket",
+      "name": "Metro Market",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "kroger_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "payless",
+      "name": "Payless",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "kroger_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "picknsave",
+      "name": "Pick 'n Save",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "kroger_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "ralphs",
+      "name": "Ralphs",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "kroger_remote",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "aimbridge",
+      "name": "Aimbridge Hospitality",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "aldi",
+      "name": "Aldi",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "alphabet",
+      "name": "Alphabet",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake Factory",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "coach",
+      "name": "Coach",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    },
+    {
+      "id": "holt",
+      "name": "Holt Company",
+      "features": {
+        "pay_distribution_write": {
+          "supported": false,
+          "max_splits": 1,
+          "split_types": []
+        }
+      },
+      "long_name": null,
+      "type": "services",
+      "category": "company",
+      "integration": "ultipro",
+      "auth_requirements": {
+        "password": {
+          "type": "password",
+          "label": "Password",
+          "order": 1
+        },
+        "username": {
+          "type": "username",
+          "label": "Username",
+          "order": 0
+        }
+      },
+      "is_item_list": false,
+      "items": null,
+      "is_disabled": false,
+      "logo_url": null,
+      "login_url": null
+    }
+  ]
+}
