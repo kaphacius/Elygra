@@ -21,8 +21,7 @@ struct LinkItemsResponse: Decodable {
 
     var prevOffset: Int? {
         previous
-            .flatMap(\.[queryParam: LinkItemsResource.offset])
-            .flatMap(Int.init)
+            .flatMap { $0[queryParam: LinkItemsResource.offset].map(Int.init) ?? 0 }
     }
 }
 

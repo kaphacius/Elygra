@@ -29,6 +29,8 @@
 		82619CF6257C0974002DAF2A /* LinkItemsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619CF4257C0974002DAF2A /* LinkItemsListVM.swift */; };
 		82619D9A257E9DD2002DAF2A /* LinkItemsListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619D99257E9DD2002DAF2A /* LinkItemsListVMTests.swift */; };
 		82619DA0257F9C4C002DAF2A /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619D9F257F9C4C002DAF2A /* TestHelpers.swift */; };
+		8261FC4B2580014A007099BB /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8261FC4A2580014A007099BB /* WebViewWrapper.swift */; };
+		8261FC5125800D3F007099BB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8261FC5025800D3F007099BB /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		82619CF4257C0974002DAF2A /* LinkItemsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkItemsListVM.swift; sourceTree = "<group>"; };
 		82619D99257E9DD2002DAF2A /* LinkItemsListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkItemsListVMTests.swift; sourceTree = "<group>"; };
 		82619D9F257F9C4C002DAF2A /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		8261FC4A2580014A007099BB /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
+		8261FC5025800D3F007099BB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +125,15 @@
 			isa = PBXGroup;
 			children = (
 				82619CCD257BD97D002DAF2A /* Network */,
+				8261FC4F25800D19007099BB /* Views */,
 				82619CAA257BD188002DAF2A /* Model */,
 				82619C7C257BD020002DAF2A /* ElygraApp.swift */,
-				82619C7E257BD020002DAF2A /* LinkItemsList.swift */,
 				82619C80257BD029002DAF2A /* Assets.xcassets */,
 				82619C85257BD029002DAF2A /* Info.plist */,
 				82619CBA257BD347002DAF2A /* Mocks */,
 				82619C82257BD029002DAF2A /* Preview Content */,
 				82619CF4257C0974002DAF2A /* LinkItemsListVM.swift */,
+				8261FC4A2580014A007099BB /* WebViewWrapper.swift */,
 			);
 			path = Elygra;
 			sourceTree = "<group>";
@@ -186,6 +191,15 @@
 				82619CDD257C04BE002DAF2A /* Resources.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8261FC4F25800D19007099BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82619C7E257BD020002DAF2A /* LinkItemsList.swift */,
+				8261FC5025800D3F007099BB /* SearchBar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82619CAC257BD19B002DAF2A /* LinkItem.swift in Sources */,
+				8261FC4B2580014A007099BB /* WebViewWrapper.swift in Sources */,
+				8261FC5125800D3F007099BB /* SearchBar.swift in Sources */,
 				82619CDE257C04BE002DAF2A /* Resources.swift in Sources */,
 				82619CF5257C0974002DAF2A /* LinkItemsListVM.swift in Sources */,
 				82619CD8257BDB2C002DAF2A /* Network.swift in Sources */,

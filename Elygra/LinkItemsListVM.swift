@@ -12,7 +12,9 @@ import Combine
 struct LinkItemVM: Identifiable {
     let id: String
     let name: String
-    let hasLogin: Bool
+    let loginUrl: URL?
+
+    var hasLogin: Bool { loginUrl != nil }
 }
 
 class LinkItemsListVM: ObservableObject {
@@ -21,6 +23,11 @@ class LinkItemsListVM: ObservableObject {
     @Published var searchString: String = String()
     @Published var canPrev: Bool = false
     @Published var canNext: Bool = false
+    @Published var presentingLoginScreen: Bool = false
+    @Published var presentingLoginUrl: URL? = nil
+    var presentingTitle: String = String()
+    @Published var presentingAlert: Bool = false
+    @Published var title: String = String()
 
     private let linkItemsSubject = PassthroughSubject<LinkItemsResource, Never>()
     private var lastResponse: LinkItemsResponse? = nil
@@ -61,6 +68,23 @@ class LinkItemsListVM: ObservableObject {
         canNext = false
     }
 
+    func onAppear() {
+        presentingLoginScreen = false
+        presentingLoginUrl = nil
+        presentingAlert = false
+        presentingTitle = String()
+    }
+
+    func onItemTap(with vm: LinkItemVM) {
+        if let url = vm.loginUrl {
+            presentingLoginScreen = true
+            presentingLoginUrl = url
+            presentingTitle = vm.name
+        } else {
+            presentingAlert = true
+        }
+    }
+
     func onPrevTap() {
         guard let offset = lastResponse.flatMap(\.prevOffset) else { return }
         linkItemsSubject.send(LinkItemsResource(search: searchString, offset: offset))
@@ -79,11 +103,40 @@ class LinkItemsListVM: ObservableObject {
         }
 
         linkItemVMs = response.results.map { li in
-            LinkItemVM(id: li.id, name: li.name, hasLogin: li.loginUrl != nil)
+            LinkItemVM(
+                id: li.id,
+                name: li.name,
+                loginUrl: li.loginUrl
+            )
         }
         canPrev = response.previous != nil
         canNext = response.next != nil
+        title = getTitle(with: response)
 
         lastResponse = response
+    }
+
+    func getTitle(with response: LinkItemsResponse) -> String {
+        if response.count == 0 {
+            return "No Results"
+        }
+
+        let lower: Int
+        if response.previous == nil {
+            lower = 1
+        } else if let prevOffset = response.prevOffset {
+            lower = prevOffset + LinkItemsResource.defaultLimit + 1
+        } else {
+            lower = 1
+        }
+
+        let upper: Int
+        if (lower + LinkItemsResource.defaultLimit - 1) < response.count {
+            upper = (lower + LinkItemsResource.defaultLimit - 1)
+        } else {
+            upper = response.count
+        }
+
+        return "Showing results \(lower) - \(upper) out of \(response.count)"
     }
 }
