@@ -11,18 +11,22 @@ protocol Resource {
     var url: URL? { get }
 }
 
-struct LinkItemsResource: Resource {
+struct LinkItemsResource: Resource, Equatable {
+    static let search = "search"
+    static let limit = "limit"
+    static let offset = "offset"
+    static let defaultLimit = 15
+
     let search: String
-    let limit: Int
     let offset: Int
 
     var url: URL? {
         guard var comps = URLComponents(string: "link-items") else { return nil }
 
         comps.queryItems = [
-            URLQueryItem(name: "search", value: search),
-            URLQueryItem(name: "limit", value: String(describing: limit)),
-            URLQueryItem(name: "offset", value: String(describing: offset))
+            URLQueryItem(name: LinkItemsResource.search, value: search),
+            URLQueryItem(name: LinkItemsResource.limit, value: String(describing: LinkItemsResource.defaultLimit)),
+            URLQueryItem(name: LinkItemsResource.offset, value: String(describing: offset))
         ]
 
         return comps.url

@@ -9,10 +9,13 @@ import Foundation
 import Combine
 
 enum Errors: Error {
-    case URLError(URLError)
+    case URLError(Error)
     case parsingError
     case urlBuildFailed
 }
+
+typealias ELResult<T> = Result<T, Errors>
+typealias ELJust<T> = Just<ELResult<T>>
 
 class Network {
     private let remoteURL: URL
@@ -21,14 +24,16 @@ class Network {
         self.remoteURL = url
     }
 
-    func load<T>(resource r: Resource) -> AnyPublisher<T, Error> where T : Decodable {
+    func load<T>(resource r: Resource) -> AnyPublisher<ELResult<T>, Never> where T : Decodable {
         guard let url = r.url else {
-            return Fail<T, Error>(error: Errors.urlBuildFailed).eraseToAnyPublisher() }
+            return Just<ELResult<T>>(.failure(.urlBuildFailed)).eraseToAnyPublisher()
+        }
 
         return URLSession.shared.dataTaskPublisher(for: url)
-            .mapError(Errors.URLError)
             .map(\.data)
             .decode(type: T.self, decoder: JSONDecoder())
+            .map(Result.success)
+            .catch { ELJust<T>(.failure(.URLError($0))).eraseToAnyPublisher() }
             .eraseToAnyPublisher()
     }
 }
