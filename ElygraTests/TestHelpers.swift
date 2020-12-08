@@ -33,7 +33,7 @@ class MockNetwork: Network {
 
 extension XCTest {
     func expectToEventually(_ test: @autoclosure () -> Bool, timeout: TimeInterval = 1.0, message: String = "") {
-        let runLoop = RunLoop.current
+        let runLoop = RunLoop.main
         let timeoutDate = Date(timeIntervalSinceNow: timeout)
         repeat {
             // 1

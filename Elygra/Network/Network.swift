@@ -25,11 +25,12 @@ class Network {
     }
 
     func load<T>(resource r: Resource) -> AnyPublisher<ELResult<T>, Never> where T : Decodable {
-        guard let url = r.url else {
+        guard let url = r.url,
+              let fullUrl = URL(string: url.absoluteString, relativeTo: remoteURL) else {
             return Just<ELResult<T>>(.failure(.urlBuildFailed)).eraseToAnyPublisher()
         }
 
-        return URLSession.shared.dataTaskPublisher(for: url)
+        return URLSession.shared.dataTaskPublisher(for: fullUrl)
             .map(\.data)
             .decode(type: T.self, decoder: JSONDecoder())
             .map(Result.success)

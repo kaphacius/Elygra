@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ElygraApp: App {
+    let network = Network(withRemoteUrl: URL(string: "https://api.argyle.io/link/v1/")!)
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LinkItemsList(vm: LinkItemsListVM(withNetwork: network))
         }
     }
 }

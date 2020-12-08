@@ -46,7 +46,7 @@ class LinkItemsListVMTests: XCTestCase {
         vm.searchString += "a"
         Thread.sleep(forTimeInterval: 1.0)
         vm.searchString += "zon"
-        Thread.sleep(forTimeInterval: 2.0)
+        Thread.sleep(forTimeInterval: 1.0)
 
         expectToEventually(
             mn.numberOfRequests == 2,

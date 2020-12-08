@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct LinkItemVM {
+struct LinkItemVM: Identifiable {
     let id: String
     let name: String
     let hasLogin: Bool
@@ -36,9 +36,10 @@ class LinkItemsListVM: ObservableObject {
     private func setUpSearch() {
         linkItemsSubject
             .flatMap(maxPublishers: .max(1), { r -> AnyPublisher<ELResult<LinkItemsResponse>, Never> in
-                self.setLoadingState()
+                DispatchQueue.main.async { self.setLoadingState() }
                 return self.network.load(resource: r)
-            }).receive(on: RunLoop.main)
+            })
+            .receive(on: DispatchQueue.main)
             .sink(receiveValue: self.linkItemsResponseReceived)
             .store(in: &cancellables)
 
@@ -68,10 +69,6 @@ class LinkItemsListVM: ObservableObject {
     func onNextTap() {
         guard let offset = lastResponse.flatMap(\.nextOffset) else { return }
         linkItemsSubject.send(LinkItemsResource(search: searchString, offset: offset))
-    }
-
-    func loadLinkItems(with r: LinkItemsResource) {
-        setLoadingState()
     }
 
     func linkItemsResponseReceived(_ r: ELResult<LinkItemsResponse>) {

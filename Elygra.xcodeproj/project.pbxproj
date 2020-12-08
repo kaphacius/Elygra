@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82619C7D257BD020002DAF2A /* ElygraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C7C257BD020002DAF2A /* ElygraApp.swift */; };
-		82619C7F257BD020002DAF2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C7E257BD020002DAF2A /* ContentView.swift */; };
+		82619C7F257BD020002DAF2A /* LinkItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C7E257BD020002DAF2A /* LinkItemsList.swift */; };
 		82619C81257BD029002DAF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82619C80257BD029002DAF2A /* Assets.xcassets */; };
 		82619C84257BD029002DAF2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82619C83257BD029002DAF2A /* Preview Assets.xcassets */; };
 		82619C8F257BD02A002DAF2A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82619C8E257BD02A002DAF2A /* ModelTests.swift */; };
@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		82619C79257BD020002DAF2A /* Elygra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elygra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82619C7C257BD020002DAF2A /* ElygraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElygraApp.swift; sourceTree = "<group>"; };
-		82619C7E257BD020002DAF2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		82619C7E257BD020002DAF2A /* LinkItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkItemsList.swift; sourceTree = "<group>"; };
 		82619C80257BD029002DAF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82619C83257BD029002DAF2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82619C85257BD029002DAF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				82619CCD257BD97D002DAF2A /* Network */,
 				82619CAA257BD188002DAF2A /* Model */,
 				82619C7C257BD020002DAF2A /* ElygraApp.swift */,
-				82619C7E257BD020002DAF2A /* ContentView.swift */,
+				82619C7E257BD020002DAF2A /* LinkItemsList.swift */,
 				82619C80257BD029002DAF2A /* Assets.xcassets */,
 				82619C85257BD029002DAF2A /* Info.plist */,
 				82619CBA257BD347002DAF2A /* Mocks */,
@@ -326,7 +326,7 @@
 				82619CF5257C0974002DAF2A /* LinkItemsListVM.swift in Sources */,
 				82619CD8257BDB2C002DAF2A /* Network.swift in Sources */,
 				82619CB1257BD2CD002DAF2A /* LinkItemsResponse.swift in Sources */,
-				82619C7F257BD020002DAF2A /* ContentView.swift in Sources */,
+				82619C7F257BD020002DAF2A /* LinkItemsList.swift in Sources */,
 				82619C7D257BD020002DAF2A /* ElygraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
